@@ -1,0 +1,41 @@
+form {
+  color: black;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  width: 381px;
+
+  label {
+    text-transform: uppercase;
+  }
+
+  input {
+    cursor: pointer;
+    padding: 11px 16px;
+    border: 2px solid $light-grey;
+    border-radius: 8px;
+    &:focus {
+      border: 1px solid $purple;
+      border-radius: 3px;
+      outline: none;
+    }
+    &.mm {
+      width: 80px
+    }
+    &.yy {
+      margin-left: 10px;
+      margin-right: 20px;
+      width: 80px;
+    }
+    &.cvc {
+     width: 191px; 
+    }
+  }
+
+  .error {
+    color: $red;
+    font-size: 12px;
+    padding-top: 8px;
+  }
+}

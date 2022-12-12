@@ -1,0 +1,45 @@
+@import "variables";
+@import "App";
+@import "Form";
+
+// google fonts
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&family=Space+Mono&display=swap");
+
+// main
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Space Grotesk", "Space Mono", monospace, sans-serif;
+  background-color: $white;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+// spacing
+.mt-xxs {
+  margin-top: 9px;
+}
+.mb-middle {
+  margin-bottom: 26px;
+}
+
+// flex
+.flex {
+  display: flex;
+}
+
+.flex-fd-c {
+  flex-direction: column;
+}
+
+.flex-jc-fe {
+  justify-content: flex-end;
+}
