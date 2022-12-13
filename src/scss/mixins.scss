@@ -1,4 +1,16 @@
-@mixin apply-flex-fd-c {
+@mixin flex-fd-c {
   display: flex;
   flex-direction: column;
+}
+
+@mixin position-top-left($top, $left) {
+  position: absolute;
+  top: $top;
+  left: $left; 
+}
+
+@mixin position-top-right($top, $right) {
+  position: absolute;
+  top: $top;
+  right: $right;
 }

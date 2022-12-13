@@ -1,11 +1,34 @@
 import cardFront from "../images/bg-card-front.png";
 import cardBack from "../images/bg-card-back.png";
+import cardLogo from "../images/card-logo.svg";
+import { FormValues } from "./Form";
 
-export default function Cards() {
+interface Props {
+  values: FormValues | null;
+}
+
+export default function Cards({ values }: Props) {
   return (
     <>
-      <img src={cardFront} alt="Card front" className="card-front" />
-      <img src={cardBack} alt="Card back" />
+      <div className="card-front">
+        <img src={cardFront} alt="Card front" className="image-card-front" />
+        <img src={cardLogo} alt="Card logo" className="image-card-logo" />
+        {values && (
+          <>
+            <div className="card-number">{values.cardNumber}</div>
+            <div className="cardholder">{values.cardholder}</div>
+            <div className="month-year-card">
+              {values.mm}/{values.yy}
+            </div>
+          </>
+        )}
+      </div>
+      <div className="card-back">
+        <img src={cardBack} alt="Card back" />
+        {values && (
+          <div className="cvc-card">{values.cvc}</div>
+        )}
+      </div>
     </>
   );
 }

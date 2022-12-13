@@ -1,0 +1,33 @@
+.card-front {
+  padding-bottom: 37px;
+  position: relative;
+  .image-card-logo {
+    @include position-top-left(28px, 32px);
+  }
+  .card-number {
+    font-size: $fs-28;
+    line-height: 1.29;
+    letter-spacing: 3.42px;
+    @include position-top-left(139px, 32px);
+  }
+  .cardholder {
+    font-size: $fs-14;
+    line-height: 1.28;
+    letter-spacing: 2px;
+    @include position-top-left(200px, 32px);
+  }
+  .month-year-card {
+    font-size: $fs-14;
+    line-height: 1.28;
+    letter-spacing: 2px;
+    @include position-top-right(200px, 136px);
+  }
+}
+
+.card-back {
+  position: relative;
+  padding-left: 94px;
+  .cvc-card {
+    @include position-top-right(107px, 57px);
+  }
+}

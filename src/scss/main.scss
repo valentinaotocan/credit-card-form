@@ -2,6 +2,7 @@
 @import 'mixins';
 @import "App";
 @import "Form";
+@import 'Cards';
 
 // google fonts
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&family=Space+Mono&display=swap");
@@ -24,7 +25,7 @@ img {
   display: block;
 }
 
-// spacing
+//spacing
 .mt-xxs {
   margin-top: 9px;
 }
@@ -32,15 +33,11 @@ img {
   margin-bottom: 26px;
 }
 
-// flex
 .flex {
   display: flex;
 }
 
-.flex-fd-c {
-  flex-direction: column;
-}
-
-.flex-jc-fe {
-  justify-content: flex-end;
+// width for form and succes button
+.width {
+  width: 381px;
 }

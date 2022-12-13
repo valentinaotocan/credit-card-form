@@ -4,9 +4,8 @@ form {
   flex-direction: column;
   height: 100%;
   justify-content: center;
-  width: 381px;
   .label-input {
-    @include apply-flex-fd-c;
+    @include flex-fd-c;
   }
 
   label {
@@ -58,10 +57,11 @@ form {
   }
 
   .cvc-wrap {
-    @include apply-flex-fd-c;
+    @include flex-fd-c;
   }
+}
 
-  button {
+button {
     font-family: inherit;
     padding: 15px;
     color: $white;
@@ -70,6 +70,29 @@ form {
     background-color: $very-dark-violet;
     border: none;
     border-radius: 8px;
+  }
 
+.success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .heading {
+    text-transform: uppercase;
+    font-size: $fs-28;
+    line-height: 1.28;
+    letter-spacing: 3.42px;
+    color: $very-dark-violet;
+    padding-top: 35px;
+  }
+  .paragraph {
+    font-size: $fs-18;
+    color: $purplish-grey;
+    line-height: 1.28;
+    padding-top: 16px;
+    padding-bottom: 48px;
+  }
+  .width {
+    width: 381px;
   }
 }

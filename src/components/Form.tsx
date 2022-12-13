@@ -1,6 +1,8 @@
 import { useForm } from "react-hook-form";
+import { useState } from 'react';
+import {default as iconComplete} from '../images/icon-complete.svg'
 
-interface FormValues {
+export interface FormValues {
   cardholder: string;
   cardNumber: number;
   mm: number;
@@ -8,22 +10,42 @@ interface FormValues {
   cvc: number;
 }
 
-export default function Form() {
-  const { register, handleSubmit, formState: { errors }, setValue, getValues, } = useForm<FormValues>();
-  
-  console.log(getValues())
+interface Props {
+  onUpdateValues: (data: FormValues) => void;
+}
 
-  const onSubmit = (data: FormValues) => console.log(data);
+export default function Form({ onUpdateValues }: Props) {
+  const { register, handleSubmit, formState: { errors }, setValue, getValues } = useForm<FormValues>();
+  const [success, setSuccess] = useState(false);
+  
+  if (success) {
+    return (
+      <div className="success">
+        <img src={iconComplete} alt="" />
+        <h2 className="heading">Thank you!</h2>
+        <p className="paragraph">We’ve added your card details</p>
+        <button className="width">Continue</button>
+      </div>
+    );
+  }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
+    <form className="width"
+      onSubmit={handleSubmit((data) => {
+        // show success message
+        setSuccess(true);
+      })}
+      onChange={() => {
+        onUpdateValues(getValues());
+      }}
+    >
       <div className="label-input mb-middle">
         <label>Cardholder name</label>
         <input
           {...register("cardholder", {
             required: "Can't be blank",
             pattern: {
-              value: /^[a-zA-Z '.-]*$/,
+              value: /^[a-zA-Zčćđž '.-]*$/,
               message: "Wrong format, strings only",
             },
           })}
@@ -76,6 +98,7 @@ export default function Form() {
                   message: "Wrong format, number only",
                 },
               })}
+              maxLength={2}
               placeholder="mm"
               className={`month ${errors.mm ? "error-border" : ""}`}
             />
@@ -88,6 +111,7 @@ export default function Form() {
                   message: "Wrong format, number only",
                 },
               })}
+              maxLength={2}
               placeholder="yy"
               className={`year ${errors.cardNumber ? "error-border" : ""}`}
             />
@@ -105,6 +129,7 @@ export default function Form() {
                 message: "Wrong format, number only",
               },
             })}
+            maxLength={3}
             placeholder="e.g 123"
             className={`cvc ${errors.cvc ? "error-border" : ""}`}
           />
@@ -112,7 +137,9 @@ export default function Form() {
         </div>
       </div>
 
-      <button type="submit">Confirm</button>
+      <button type="submit" value="Submit">
+        Confirm
+      </button>
     </form>
   );
 }

@@ -15,15 +15,14 @@
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      left: 164px;
-
-      .card-front {
-        padding-bottom: 37px;
-      }
+      left: 140px;
     }
   }
   .form-container {
     padding-right: 227px;
     padding-left: 349px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
