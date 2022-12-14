@@ -39,5 +39,8 @@ img {
 
 // width for form and succes button
 .width {
-  width: 381px;
+  width: 327px;
+  @media(max-width: 450px) {
+   max-width: 100%;
+  }
 }

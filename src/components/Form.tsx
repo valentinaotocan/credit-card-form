@@ -86,7 +86,7 @@ export default function Form({ onUpdateValues }: Props) {
         )}
       </div>
 
-      <div className="date-cvc mb-middle">
+      <div className="date-cvc">
         <div>
           <label>Exp. date (mm/yy)</label>
           <div className="flex mt-xxs">
@@ -137,7 +137,7 @@ export default function Form({ onUpdateValues }: Props) {
         </div>
       </div>
 
-      <button type="submit" value="Submit">
+      <button type="submit">
         Confirm
       </button>
     </form>

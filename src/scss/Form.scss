@@ -35,10 +35,20 @@ form {
       margin-left: 10px;
       margin-right: 20px;
       width: 80px;
+      @media (max-width: 451px) {
+        margin-left: 8px;
+        margin-right: 11px;
+      }
     }
     &.cvc {
       width: 191px;
       margin-top: 9px;
+      @media (max-width: 451px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        width: 99px;
+      }
     }
   }
 
@@ -54,6 +64,10 @@ form {
 
   .date-cvc {
     display: flex;
+    padding-bottom: 40px;
+    @media (max-width: 1024px) {
+      padding-bottom: 28px;
+    }
   }
 
   .cvc-wrap {
@@ -62,21 +76,20 @@ form {
 }
 
 button {
-    font-family: inherit;
-    padding: 15px;
-    color: $white;
-    font-size: $fs-18;
-    line-height: 1.278;
-    background-color: $very-dark-violet;
-    border: none;
-    border-radius: 8px;
-  }
+  font-family: inherit;
+  padding: 15px;
+  color: $white;
+  font-size: $fs-18;
+  line-height: 1.278;
+  background-color: $very-dark-violet;
+  border: none;
+  border-radius: 8px;
+}
 
 .success {
   display: flex;
   flex-direction: column;
   align-items: center;
-
   .heading {
     text-transform: uppercase;
     font-size: $fs-28;

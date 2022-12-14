@@ -1,6 +1,7 @@
 .card-front {
   padding-bottom: 37px;
   position: relative;
+  z-index: 1;
   .image-card-logo {
     @include position-top-left(28px, 32px);
   }
@@ -14,6 +15,7 @@
     font-size: $fs-14;
     line-height: 1.28;
     letter-spacing: 2px;
+    text-transform: uppercase;
     @include position-top-left(200px, 32px);
   }
   .month-year-card {
@@ -27,7 +29,58 @@
 .card-back {
   position: relative;
   padding-left: 94px;
+  @media(max-width:1200px) {
+    padding-left: 60px;
+  }
   .cvc-card {
     @include position-top-right(107px, 57px);
+  }
+}
+
+@media(max-width: 1024px) {
+  .card-front {
+    padding-bottom: unset;
+    top: 180px;
+  }
+  .card-back {
+    bottom: 204px;
+    padding-left: 90px
+  }
+}
+
+@media(max-width: 600px) {
+  .card-front {
+    top: 90px;
+    .image-card-front {
+      width: 285px;
+    }
+    .image-card-logo {
+      width: 30px;
+      @include position-top-left(18px, 19px);
+    }
+    .card-number {
+      font-size: $fs-18;
+      letter-spacing: 2.2px;
+      @include position-top-left(90px, 19px);
+    }
+    .cardholder {
+      font-size: $fs-9;
+      @include position-top-left(126px, 19px);
+    }
+    .month-year-card {
+      font-size: $fs-9;
+      @include position-top-right(126px, 108px);
+    }
+  }
+  .card-back {
+    bottom: 156px;
+    padding-left: 80px;
+    .image-card-back {
+      width: 285px;
+    }
+    .cvc-card {
+    font-size: $fs-9;
+    @include position-top-right(66px, 57px);
+  }
   }
 }

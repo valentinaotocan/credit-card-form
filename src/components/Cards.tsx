@@ -11,7 +11,9 @@ export default function Cards({ values }: Props) {
   return (
     <>
       <div className="card-front">
-        <img src={cardFront} alt="Card front" className="image-card-front" />
+        <div className="image-card-front">
+          <img src={cardFront} alt="Card front" />
+        </div>
         <img src={cardLogo} alt="Card logo" className="image-card-logo" />
         {values && (
           <>
@@ -24,10 +26,8 @@ export default function Cards({ values }: Props) {
         )}
       </div>
       <div className="card-back">
-        <img src={cardBack} alt="Card back" />
-        {values && (
-          <div className="cvc-card">{values.cvc}</div>
-        )}
+        <img src={cardBack} alt="Card back" className="image-card-back" />
+        {values && <div className="cvc-card">{values.cvc}</div>}
       </div>
     </>
   );
