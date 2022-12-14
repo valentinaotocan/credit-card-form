@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/credit-card-form/static/css/main.a5d21363.css",
+    "main.js": "/credit-card-form/static/js/main.0cd23272.js",
+    "static/media/bg-main-desktop.png": "/credit-card-form/static/media/bg-main-desktop.806e7aa7b4dbc1d78bc3.png",
+    "static/media/bg-card-back.png": "/credit-card-form/static/media/bg-card-back.23f68fa3aa3d5b33dfc8.png",
+    "static/media/bg-card-front.png": "/credit-card-form/static/media/bg-card-front.8153e2ca184402a8385f.png",
+    "static/media/bg-main-mobile.png": "/credit-card-form/static/media/bg-main-mobile.caa4689407777a312ede.png",
+    "index.html": "/credit-card-form/index.html",
+    "static/media/icon-complete.svg": "/credit-card-form/static/media/icon-complete.8fd757c0c5c44b1d597ca411400e046d.svg",
+    "static/media/card-logo.svg": "/credit-card-form/static/media/card-logo.8ca9036515954c3f8191559dce9c7bdf.svg",
+    "main.a5d21363.css.map": "/credit-card-form/static/css/main.a5d21363.css.map",
+    "main.0cd23272.js.map": "/credit-card-form/static/js/main.0cd23272.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a5d21363.css",
+    "static/js/main.0cd23272.js"
+  ]
+}
