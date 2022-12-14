@@ -29,7 +29,7 @@
 .card-back {
   position: relative;
   padding-left: 94px;
-  @media(max-width:1200px) {
+  @media (max-width: 1200px) {
     padding-left: 60px;
   }
   .cvc-card {
@@ -37,18 +37,18 @@
   }
 }
 
-@media(max-width: 1024px) {
+@media (max-width: 1024px) {
   .card-front {
     padding-bottom: unset;
     top: 180px;
   }
   .card-back {
     bottom: 204px;
-    padding-left: 90px
+    padding-left: 90px;
   }
 }
 
-@media(max-width: 600px) {
+@media (max-width: 600px) {
   .card-front {
     top: 90px;
     .image-card-front {
@@ -75,12 +75,18 @@
   .card-back {
     bottom: 156px;
     padding-left: 80px;
+    @media (max-width: 400px) {
+      padding-left: 19px;
+    }
+    @media (max-width: 325px) {
+      padding-left: 0;
+    }
     .image-card-back {
       width: 285px;
     }
     .cvc-card {
-    font-size: $fs-9;
-    @include position-top-right(66px, 57px);
-  }
+      font-size: $fs-9;
+      @include position-top-right(66px, 57px);
+    }
   }
 }

@@ -108,5 +108,8 @@ button {
   }
   .width {
     width: 381px;
+    @media(max-width: 450px) {
+      width: 100%;
+    }
   }
 }
