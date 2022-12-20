@@ -86,7 +86,7 @@ export default function Form({ onUpdateValues }: Props) {
         )}
       </div>
 
-      <div className="date-cvc">
+      <div className="date-cvc flex">
         <div>
           <label>Exp. date (mm/yy)</label>
           <div className="flex mt-xxs">

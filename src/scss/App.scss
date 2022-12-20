@@ -3,7 +3,6 @@
   font-weight: $fw-normal;
   color: $white;
   font-size: $fs-18;
-  display: flex;
   position: relative;
   .background-container {
     background: url(../images/bg-main-desktop.png) no-repeat center center/cover;
@@ -19,9 +18,7 @@
   .form-container {
     padding-left: 349px;
     padding-right: 8%;
-    display: flex;
     justify-content: center;
-    align-items: center;
     @media (max-width: 1200px) {
       padding-right: 4%;
     }
