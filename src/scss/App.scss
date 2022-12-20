@@ -2,7 +2,7 @@
   height: 100vh;
   font-weight: $fw-normal;
   color: $white;
-  font-size: 18px;
+  font-size: $fs-18;
   display: flex;
   position: relative;
   .background-container {
@@ -14,9 +14,6 @@
       top: 50%;
       transform: translateY(-50%);
       left: 8%;
-      @media (max-width: 1200px) {
-        left: 4%;
-      }
     }
   }
   .form-container {
@@ -31,6 +28,12 @@
   }
 }
 
+@media (max-width: 1200px) {
+  .App .background-container .cards {
+    left: 4%;
+  }
+}
+
 @media (max-width: 1024px) {
   .App {
     height: 100%;
@@ -38,6 +41,7 @@
     .background-container {
       width: 100%;
       height: 377px;
+      @include padding-left-right;
       .cards {
         top: unset;
         transform: unset;
@@ -54,25 +58,26 @@
   .App {
     .background-container {
       height: 240px;
-      background: url(../images/bg-main-mobile.png) no-repeat center
-        center/cover;
+      background: url(../images/bg-main-mobile.png) no-repeat center center/cover;
       .cards {
-        left: 16px;
-        padding-right: 16px;
         padding-top: 32px;
       }
     }
-    .form-container {
-      padding-top: 91px;
-    }
   }
+}
 
-  @media(max-width: 375px) {
-    .App {
-      .form-container {
-        padding-left: 14px;
-        padding-right: 14px;
+@media (max-width: 420px) {
+  .App {
+    .background-container {
+      .cards {
+        left: unset;
+        .card-back {
+          padding-left: 0;
+        }
       }
+    }
+    .form-container {
+      @include padding-left-right;
     }
   }
 }

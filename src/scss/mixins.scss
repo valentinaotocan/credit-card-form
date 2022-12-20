@@ -14,3 +14,13 @@
   top: $top;
   right: $right;
 }
+
+@mixin fs-lh($font-size, $line-height) {
+  font-size: $font-size;
+  line-height: $line-height;
+}
+
+@mixin padding-left-right {
+  padding-left: 12px;
+  padding-right: 12px;
+}

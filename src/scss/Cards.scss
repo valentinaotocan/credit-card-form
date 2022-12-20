@@ -6,21 +6,18 @@
     @include position-top-left(28px, 32px);
   }
   .card-number {
-    font-size: $fs-28;
-    line-height: 1.29;
+    @include fs-lh($fs-28, 1.29);
     letter-spacing: 3.42px;
     @include position-top-left(139px, 32px);
   }
   .cardholder {
-    font-size: $fs-14;
-    line-height: 1.28;
+    @include fs-lh($fs-14, 1.28);
     letter-spacing: 2px;
     text-transform: uppercase;
     @include position-top-left(200px, 32px);
   }
   .month-year-card {
-    font-size: $fs-14;
-    line-height: 1.28;
+    @include fs-lh($fs-14, 1.28);
     letter-spacing: 2px;
     @include position-top-right(200px, 136px);
   }
@@ -75,12 +72,6 @@
   .card-back {
     bottom: 156px;
     padding-left: 80px;
-    @media (max-width: 400px) {
-      padding-left: 19px;
-    }
-    @media (max-width: 325px) {
-      padding-left: 0;
-    }
     .image-card-back {
       width: 285px;
     }
@@ -89,4 +80,5 @@
       @include position-top-right(66px, 57px);
     }
   }
+  
 }
