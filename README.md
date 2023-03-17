@@ -1,4 +1,4 @@
-💥 I could've probably shorthen the scss even more, but my focus here was on tsx. 💥
+💥https://valentinaotocan.github.io/credit-card-form/ 💥
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
