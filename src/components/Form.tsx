@@ -30,7 +30,8 @@ export default function Form({ onUpdateValues }: Props) {
   }
 
   return (
-    <form className="width"
+    <form
+      className="width"
       onSubmit={handleSubmit((data) => {
         // show success message
         setSuccess(true);
@@ -94,7 +95,7 @@ export default function Form({ onUpdateValues }: Props) {
               {...register("mm", {
                 required: "Can't be blank",
                 pattern: {
-                  value: /[0-12]{2}/,
+                  value: /^(0?[1-9]|1[0-2])$/,
                   message: "Wrong format, number only",
                 },
               })}
@@ -107,7 +108,7 @@ export default function Form({ onUpdateValues }: Props) {
               {...register("yy", {
                 required: "Can't be blank",
                 pattern: {
-                  value: /[0-9]{2}/,
+                  value: /^2[0-9]$|^30$/,
                   message: "Wrong format, number only",
                 },
               })}
@@ -137,9 +138,7 @@ export default function Form({ onUpdateValues }: Props) {
         </div>
       </div>
 
-      <button type="submit">
-        Confirm
-      </button>
+      <button type="submit">Confirm</button>
     </form>
   );
 }
